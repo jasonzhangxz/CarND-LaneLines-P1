@@ -16,11 +16,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
-[image2]: ./examples/line-segments-example.jpg "LineSegExample"
-[image3]: ./examples/laneLines_thirdPass.jpg "SingleLineExample"
-[image4]: ./examples/mask.png "Mask"
-[image5]: ./examples/edges.png "Canny"
-[image6]: ./examples/blur_gray.png "GaussianBlur"
+
 ---
 
 ### Reflection
