@@ -16,7 +16,11 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
-
+[image2]: ./examples/line-segments-example.jpg "LineSegExample"
+[image3]: ./examples/laneLines_thirdPass.jpg "SingleLineExample"
+[image4]: ./examples/mask.png "Mask"
+[image5]: ./examples/edges.png "Canny"
+[image6]: ./examples/blur_gray.png "GaussianBlur"
 ---
 
 ### Reflection
@@ -25,20 +29,28 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps: 
 First, I converted the images to grayscale;
-![alt text][image1]
+
+![alt text](./examples/grayscale.jpg)
 
 Second,apply a Gaussian blur to reduce the image noise and details.
-![alt text][image6]
+
+![alt text](./examples/blur_gray.png)
+
 Third, apply Canny edge detection.
-![alt text][image5]
+
+![alt text](./examples/edges.png)
+
 Fourth, crop the image to a region of interest. For this special case, as the camera is fixed on the car, so the ROI will always be the front area contains the lane information. In this project, a trapezoid region is created.
-![alt text][image4]
+
+![alt text](./examples/mask.png)
 
 Fifth, define the Hough transformation parameters and apply Hough transforms to detect the lines in the image. The detected lines will be some line segments. 
-![alt text][image2]
+
+![alt text](./examples/line-segments-example.jpg)
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by separating those line segments into Left and Right groups, using the polyfit function to find the single line ,and then get the intersections of it and the ROI. In the end just draw the lines between Left Start and End points, and Right Start and End points.
-![alt text][image3]
+
+![alt text](./examples/laneLines_thirdPass.jpg)
 
 
 
